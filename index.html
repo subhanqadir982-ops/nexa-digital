@@ -1,0 +1,703 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexa Digital | Web Agency</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+      html {
+    scroll-behavior: smooth;
+      }
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b1020;
+            color: white;
+        }
+
+        header {
+             position: sticky;
+top: 0;
+  background: #0b1020;
+z-index: 1000;
+            padding: 24px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #26304a;
+        }
+
+        header h2 {
+            color: #71e5ff;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        .hero {
+            min-height: 75vh;
+            padding: 90px 8%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            background: radial-gradient(circle at top right, #203b70, #0b1020 60%);
+        }
+      
+.hero h1,
+.hero .tag,
+.hero p,
+.hero .btn {
+    animation: fadeUp 0.8s ease both;
+}
+
+.hero p {
+    animation-delay: 0.15s;
+}
+
+.hero .btn {
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+        .tag {
+            color: #71e5ff;
+            letter-spacing: 3px;
+            font-size: 13px;
+            margin-bottom: 22px;
+        }
+       
+.hero h1 {
+    font-size: clamp(38px, 7vw, 70px);
+    line-height: 1.15;
+    max-width: 850px;
+    margin-bottom: 26px;
+    letter-spacing: -1.5px;
+}
+        .hero h1 span {
+            color: #71e5ff;
+        }
+
+        .hero p {
+            color: #c0c9dd;
+            font-size: 17px;
+            line-height: 1.8;
+            max-width: 600px;
+        }
+
+.btn {
+    display: inline-block;
+    margin-top: 28px;
+    padding: 15px 24px;
+    background: #71e5ff;
+    color: #0b1020;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(113, 229, 255, 0.2);
+}
+
+        
+      .btn-outline {
+    margin-left: 12px;
+    background: transparent;
+    color: #71e5ff;
+    border: 1px solid #71e5ff;
+}
+
+.btn-outline:hover {
+    background: #71e5ff;
+    color: #0b1020;
+}
+.services {
+    padding: 70px 8%;
+    background: #10182b;
+}
+.why-us {
+    padding: 75px 8%;
+    background: linear-gradient(180deg, #10182b, #0b1020);
+    border-top: 1px solid #26304a;
+    border-bottom: 1px solid #26304a;
+}
+
+.why-us h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+.why-us .service-card {
+    background: rgba(23, 35, 59, 0.65);
+    border-color: #263b57;
+}
+
+.why-us .service-icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #36516f;
+    border-radius: 12px;
+    background: rgba(113, 229, 255, 0.08);
+}
+
+.why-us .service-card h3 {
+    margin-bottom: 12px;
+}
+
+@media (max-width: 600px) {
+    .why-us {
+        padding: 55px 22px;
+    }
+
+    .why-us h2 {
+        font-size: 30px;
+    }
+}
+.services h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.section-desc {
+    color: #c0c9dd;
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.service-card {
+    background: linear-gradient(145deg, #17233b, #10182b);
+    border: 1px solid #2b3b59;
+    border-radius: 14px;
+    padding: 30px;
+    transition: transform 0.3s ease, border-color 0.3s ease,
+                box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+    border-color: #71e5ff;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.service-card:hover {
+    border-color: #71e5ff;
+    transform: translateY(-5px);
+}
+
+.service-icon {
+    color: #71e5ff;
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+
+.service-card h3 {
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.service-card p {
+    color: #c0c9dd;
+    line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+}
+      
+.work {
+    padding: 70px 8%;
+    background: #0b1020;
+}
+
+.work h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    margin-top: 35px;
+    align-items: stretch;
+}
+
+.work-visual {
+    min-height: 190px;
+    padding: 24px;
+    text-align: center;
+    font-size: 23px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+.work-info {
+    padding: 26px;
+}
+
+.work-info h3 {
+    font-size: 23px;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.work-info p {
+    font-size: 16px;
+    color: #c0c9dd;
+    line-height: 1.8;
+}
+
+
+.work-card {
+    background: #17233b;
+    border: 1px solid #2b3b59;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.work-card:hover {
+    transform: translateY(-5px);
+    border-color: #71e5ff;
+}
+
+.work-visual {
+    min-height: 190px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.urban {
+    background: linear-gradient(135deg, #263d50, #111827);
+    color: #71e5ff;
+}
+
+.portfolio {
+    background: linear-gradient(135deg, #3b2865, #111827);
+    color: #d5c2ff;
+}
+
+.work-info {
+    padding: 24px;
+}
+
+.work-info h3 {
+    margin-bottom: 10px;
+}
+
+.work-info p {
+    color: #c0c9dd;
+    line-height: 1.6;
+}
+
+        @media (max-width: 600px) {
+            header {
+                padding: 20px;
+                flex-wrap: wrap;
+                gap: 16px;
+            }
+
+            nav a {
+                margin-left: 0;
+                margin-right: 12px;
+                font-size: 13px;
+            }
+
+            .hero {
+                padding: 65px 22px;
+            }
+        }
+      
+.contact {
+    padding: 80px 8%;
+    text-align: center;
+    background: radial-gradient(circle at center, #203b70, #0b1020 70%);
+    border-top: 1px solid #26304a;
+}
+
+.contact .tag {
+    margin-bottom: 20px;
+}
+
+.contact h2 {
+    font-size: clamp(32px, 5vw, 48px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    color: #c0c9dd;
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.contact .btn {
+    margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+    .contact {
+        padding: 65px 22px;
+    }
+}
+      
+.footer {
+    padding: 40px 20px 25px;
+    text-align: center;
+    background: #080c18;
+    border-top: 1px solid #26304a;
+}
+
+.footer h3 {
+    color: #71e5ff;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+}
+
+.footer p {
+    color: #c0c9dd;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.footer-line {
+    width: 80px;
+    height: 2px;
+    background: #71e5ff;
+    margin: 24px auto;
+}
+
+.footer .copyright {
+    color: #8290aa;
+    font-size: 13px;
+}
+      @media (max-width: 600px) {
+    .services h2,
+    .work h2 {
+        font-size: 30px;
+    }
+
+    .service-card,
+    .work-info {
+        padding: 22px;
+    }
+
+    .work-visual {
+        min-height: 160px;
+        font-size: 20px;
+    }
+
+    .btn {
+        max-width: 100%;
+        text-align: center;
+    }
+      }
+      .project-label {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 6px 12px;
+    color: #71e5ff;
+    background: rgba(113, 229, 255, 0.08);
+    border: 1px solid #36516f;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+      }
+      .welcome-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #080c18;
+    animation: welcomeExit 0.8s ease 2.5s forwards;
+}
+
+.welcome-content {
+    padding: 20px;
+    animation: welcomeAppear 1s ease both;
+}
+
+.welcome-tag {
+    color: #71e5ff;
+    font-size: 11px;
+    letter-spacing: 4px;
+    margin-bottom: 22px;
+}
+
+.welcome-content h1 {
+    font-size: clamp(32px, 8vw, 58px);
+    letter-spacing: 2px;
+    color: white;
+}
+
+.welcome-content h1 span {
+    color: #71e5ff;
+}
+
+.welcome-line {
+    width: 70px;
+    height: 3px;
+    background: #71e5ff;
+    margin: 24px auto;
+    border-radius: 5px;
+    box-shadow: 0 0 18px #71e5ff;
+    animation: lineGrow 1s ease both;
+}
+
+.welcome-subtitle {
+    color: #c0c9dd;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+@keyframes welcomeAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes lineGrow {
+    from { width: 0; }
+    to { width: 70px; }
+}
+
+@keyframes welcomeExit {
+    to {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+}
+      .reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+    </style>
+</head>
+<body>
+  <script>
+const revealItems = document.querySelectorAll(
+    '.service-card, .work-card, .why-us h2, .why-us .section-desc'
+);
+
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            revealObserver.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.15
+});
+
+revealItems.forEach((item) => {
+    item.classList.add('reveal');
+    revealObserver.observe(item);
+});
+  </script>
+<div class="welcome-screen">
+    <div class="welcome-content">
+        <div class="welcome-glow"></div>
+        <p class="welcome-tag">WELCOME TO THE FUTURE</p>
+        <h1>NEXA <span>DIGITAL</span></h1>
+        <div class="welcome-line"></div>
+        <p class="welcome-subtitle">We Build. You Grow.</p>
+    </div>
+</div>
+    <header>
+        <h2>NEXA DIGITAL</h2>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#why-us">Why Us</a>
+            <a href="#work">Our Work</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="tag">DIGITAL AGENCY • WEB SOLUTIONS</div>
+
+        <h1>We Build Websites That <span>Grow Businesses.</span></h1>
+
+        <p>
+            We create modern, responsive and user-friendly websites
+            that help businesses build their online presence.
+        </p>
+
+        <a href="#contact" class="btn">LET'S WORK TOGETHER ↗</a>
+      <a href="#work" class="btn btn-outline">VIEW OUR WORK ↓</a>
+    </section>
+
+    
+<section class="services" id="services">
+    <div class="tag">WHAT WE DO</div>
+    <h2>Our Services</h2>
+    <p class="section-desc">
+        Smart digital solutions to help your business grow.
+    </p>
+
+    <div class="service-grid">
+        <div class="service-card">
+            <div class="service-icon">✦</div>
+            <h3>Website Design</h3>
+            <p>Modern and attractive designs for your brand.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">⌘</div>
+            <h3>Web Development</h3>
+            <p>Fast, functional and user-friendly websites.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">▣</div>
+            <h3>Responsive Design</h3>
+            <p>Websites that work smoothly on mobile and desktop.</p>
+        </div>
+    </div>
+</section>
+<section class="why-us" id="why-us">
+    <div class="tag">WHY NEXA DIGITAL</div>
+    <h2>Why Choose Us?</h2>
+    <p class="section-desc">
+        We combine creative design with practical solutions
+        to help businesses grow online.
+    </p>
+
+    <div class="service-grid">
+        <div class="service-card">
+            <div class="service-icon">✦</div>
+            <h3>Modern Design</h3>
+            <p>Clean, attractive designs that make your brand stand out.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">▣</div>
+            <h3>Mobile Friendly</h3>
+            <p>Layouts designed to work smoothly on phones and desktops.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">◎</div>
+            <h3>User Focused</h3>
+            <p>Simple navigation that helps visitors find what they need.</p>
+        </div>
+    </div>
+</section>
+
+<section class="work" id="work">
+    <div class="tag">OUR WORK</div>
+    <h2>Selected Projects</h2>
+    <p class="section-desc">
+        A few website demos showcasing our design approach.
+    </p>
+
+    <div class="work-grid">
+        <div class="work-card">
+            <div class="work-visual urban">
+                URBAN WEAR
+            </div>
+            <div class="work-info">
+                <h3>Urban Wear</h3>
+                <p>Fashion Store Website Demo</p>
+            </div>
+        </div>
+
+        <div class="work-card">
+            <div class="work-visual portfolio">
+                MY PORTFOLIO
+            </div>
+            <div class="work-info">
+                <h3>Personal Portfolio</h3>
+                <p>Personal Branding Website Demo</p>
+              <p class="project-label">DEMO PROJECT</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <div class="tag">LET'S TALK</div>
+
+    <h2>Have a project in mind?</h2>
+
+    <p>
+        Let's create something great together.
+        Tell us about your website idea.
+    </p>
+  <a class="btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=subhanqadir982@gmail.com" target="_blank">
+    START A PROJECT ↗
+  </a>
+</section>
+    
+<footer class="footer">
+    <h3>NEXA DIGITAL</h3>
+    <p>Building digital experiences that move businesses forward.</p>
+    <div class="footer-line"></div>
+    <p class="copyright">© 2026 Nexa Digital · Website Demo</p>
+</footer>
+
+</body>
+</html>
